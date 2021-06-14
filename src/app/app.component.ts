@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-named-chunks';
+  constructor() {
+    const theme = "a";
+    import(/* webpackChunkName: "theme-" */`../jsons/${theme}.json`)
+  }
 }
